@@ -39,9 +39,11 @@
 
 <body>
 	<header>
-		<div class="container">
-			<h1 class="logo"><a href="#">waxom</a></h1>
-			<nav>
+		<div class="container clearfix">
+			<h1 class="logo">
+				<a href="#">waxom</a>
+			</h1>
+			<nav class="clearfix">
 				<ul class="navbar_main"> 
 					<!--ul>li*8>a-->
 					<li><a href="#" class="active">home</a></li>
@@ -59,7 +61,6 @@
 				</ul>
 			</nav>
 		</div>
-
 	</header>
 	<div class="main_slider">
 		<ul class="slider_list cycle-slideshow"
@@ -71,27 +72,33 @@
 		data-cycle-pager=".custom-pager"
 		>
 			<li class="slide1">
-				<h3>Unique and Modern Design</h3>
-				<h2>Portfolio PSD Template</h2>
-				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				<a href="#" class="btn">get started</a>
+				<div class="slide_text">
+					<h3>Unique and Modern Design</h3>
+					<h2>Portfolio PSD Template</h2>
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+					<a href="#" class="btn">get started</a>
+				</div>
 			</li>
 			<li class="slide2">
+				<div class="slide_text">
 				<h3>Unique and Modern Design</h3>
 				<h2>Portfolio PSD Template</h2>
 				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
 				<a href="#" class="btn">get started</a>
+			</div>
 			</li>
 			<li class="slide3">
+				<div class="slide_text">
 				<h3>Unique and Modern Design</h3>
 				<h2>Portfolio PSD Template</h2>
 				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
 				<a href="#" class="btn">get started</a>
+			</div>
 			</li>
 		</ul>
 		<p class="controls">
-			<a href="" class="prev">prev</a>
-			<a href="" class="next">next</a>
+			<a href="" class="prev"><i class="fas fa-chevron-left"></i></a>
+			<a href="" class="next"><i class="fas fa-chevron-right"></i></a>
 		</p>
 		<p class="custom-pager"></p>
 	</div>

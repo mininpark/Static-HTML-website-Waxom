@@ -1,1 +1,77 @@
 @import url(common.css);
+
+/*HEADER*/
+header {
+    position: fixed; z-index: 101; left: 0; right: 0; margin: 20px 0;
+}
+header .logo {float: left;}
+header nav {float: right;}
+header nav ul {float: left;}
+header nav ul li {
+    float: left; 
+    line-height: 56px; 
+    font-size: 12px; 
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+header nav ul li a {color: #fff;}
+
+header h1 a {
+    background-image: url(../images/logo-white.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 171px; height: 56px;
+    text-indent: -9999em;
+}
+header nav .navbar_main {
+    margin-right: 30px;
+}
+/*SLIDER*/
+.slider_list li{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1024px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+.slider_list li.slide1 {background-image: url(../images/mainslide_01.jpg);}
+.slider_list li.slide2 {background-image: url(../images/mainslide_02.jpg);}
+.slider_list li.slide3 {background-image: url(../images/mainslide_03.jpg);}
+
+.slider_list li .slide_text{
+    width: 700px;
+    margin: auto;
+	padding: 401px 0 53px;
+	color: #fff;
+}
+.slider_list li .slide_text p {
+    width: 500px;
+    margin: 0 auto 50px; 
+    font-size: 12px; line-height: 20px;
+}
+.main_slider {position: relative;}
+
+.main_slider p.controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+    font-size: 50px;
+    opacity: 60%;
+} 
+.main_slider p.controls a{
+    color: #fff;
+} 
+.main_slider p.controls .prev {
+    margin-right: 550%;
+}
+.main_slider p.controls .next {
+    margin-left: 40%;
+}
+
+.main_slider p.custom-pager {
+    position: absolute; bottom: 20px; z-index: 102;
+}
