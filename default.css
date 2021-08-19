@@ -1,5 +1,6 @@
 @import url(common.css);
 
+
 /*HEADER*/
 header {
     position: fixed; z-index: 101; left: 0; right: 0; margin: 20px 0;
@@ -54,24 +55,94 @@ header nav .navbar_main {
 .main_slider {position: relative;}
 
 .main_slider p.controls {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     z-index: 102;
-    font-size: 50px;
+    font-size: 70px;
     opacity: 60%;
 } 
+
 .main_slider p.controls a{
     color: #fff;
 } 
+
 .main_slider p.controls .prev {
-    margin-right: 550%;
+    margin-left: 150px;
 }
 .main_slider p.controls .next {
-    margin-left: 40%;
+    margin-right: 150px;
+}
+.main_slider p.custom-pager {
+    position: absolute; left:0; right:0; bottom: 20px; z-index: 102;
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    z-index: 103;
 }
 
-.main_slider p.custom-pager {
-    position: absolute; bottom: 20px; z-index: 102;
+.main_slider .custom-pager span{
+	width: 15px; height: 15px;
+	background: rgba(255,255,255,.8);
+	border: 3px solid transparent;
+	margin: 0 10px;
+	border-radius: 50%;
+	text-indent: -9999em;
+	display: inline-block;
+}
+
+.main_slider p .cycle-pager-active {
+    background: none;
+    border: 2px solid #fff;
+}
+/*CONTENT*/
+main.content .service ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin: 90px 0;
+}
+main.content .service ul li {
+    margin: 0px 10px;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 600;
+	font-family: "Raleway", sans-serif;
+    color: #555555;
+}
+main.content .service ul li:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 10px auto; /* This will center the border. */
+    width: 25%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid #c7b299; /* This creates the border. Replace black with whatever color you want. */
+    opacity: 50%;
+}
+main.content .service svg {
+    display: block;
+    font-size: 34px;
+    margin: auto;
+}
+main.content .service ul li p {
+    font: 12px/24px "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #8c8c8c;
+}
+main.content .service ul li:hover {
+    color: #c7b299;
+}
+
+main.content .idea_slide {
+    background: rgb(251,250,248);
+}
+main.content .idea_slide .container {
+    text-align: center;
+    width: 50%;
+}
+main.content .idea_slide img {
+    margin: 50px auto;
 }
