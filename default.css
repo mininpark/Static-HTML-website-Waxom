@@ -138,11 +138,106 @@ main.content .service ul li:hover {
 
 main.content .idea_slide {
     background: rgb(251,250,248);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 main.content .idea_slide .container {
-    text-align: center;
     width: 50%;
+    padding: 70px 0 0;
 }
-main.content .idea_slide img {
-    margin: 50px auto;
+main.content .idea_slide .container p {
+    margin-bottom: 32px;
+}
+
+main.content .text_purchase {
+    background: linear-gradient(to right, black, #4e3427);
+    height: 150px;
+    padding: 50px 0;
+}
+main.content .text_purchase ul{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: nowrap;
+}
+main.content .text_purchase ul li p{
+    font-size: 24px;
+	font-family: "Raleway", sans-serif;
+    color: #fff;
+}
+main.content .text_purchase ul li p.text_p_sub {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8c8c8c;
+}
+main.content .text_purchase ul li p em {
+    color: #c7b299;
+}
+main.content .text_purchase .container a {
+    color: #fff;
+}
+main.content .latest_projects {
+    height: 1160px;
+    padding: 80px 0;
+}
+
+section.latest_projects ul.project_img{
+    display: inline-flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    justify-content: center;
+    align-items: center;
+}
+section.latest_projects ul.project_img>* {
+    flex: 1 1 30%;
+    width: 370px; height: 340px;
+}
+
+section.latest_projects ul.project_img li .img1 {background-image: url(../images/project_01.jpg);}
+section.latest_projects ul.project_img li .img2 {background-image: url(../images/project_02.jpg);}
+section.latest_projects ul.project_img li .img3 {background-image: url(../images/project_03.jpg);}
+section.latest_projects ul.project_img li .img4 {background-image: url(../images/project_04.jpg);}
+section.latest_projects ul.project_img li .img5 {background-image: url(../images/project_05.jpg);}
+section.latest_projects ul.project_img li .img6 {background-image: url(../images/project_06.jpg);}
+
+section.latest_projects ul.project_img li div {
+    display: block;
+    height: 240px;
+    width: 370px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.latest_projects ul.project_img .img_text{
+    display: block;
+    height: 100px;
+    padding: 30px 30px 0;
+    background-color: rgb(251,250,248);
+}
+
+section.latest_projects ul.project_img p.prj_main_tt {
+    font-size: 17px;
+    font-weight: 500;
+    color: #c7b299;
+    line-height: 24px;
+}
+
+section.video {
+    height: 700px; width: 100%;
+    background-image: url(../images/video_bg.jpg);
+}
+
+section.counters {
+    background: linear-gradient(to right, black, #4e3427);
+    height: 300px;
+    padding: 50px 0;
+}
+
+section.counters .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
 }
