@@ -147,6 +147,7 @@ main.content .idea_slide .container {
     width: 50%;
     padding: 70px 0 0;
 }
+
 main.content .idea_slide .container p {
     margin-bottom: 32px;
 }
@@ -157,10 +158,10 @@ main.content .text_purchase {
     padding: 50px 0;
 }
 main.content .text_purchase ul{
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 main.content .text_purchase ul li p{
     font-size: 24px;
@@ -178,9 +179,29 @@ main.content .text_purchase ul li p em {
 main.content .text_purchase .container a {
     color: #fff;
 }
+/*LATEST PROJECTS*/
 main.content .latest_projects {
     height: 1160px;
     padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section.latest_projects ul.project_category {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+}
+section.latest_projects ul.project_category>* {
+    border: 0.3px solid #8c8c8c;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+section.latest_projects ul.project_category>*:hover {
+    background-color: #4e3427;
+    color: #fff;
 }
 
 section.latest_projects ul.project_img{
@@ -190,10 +211,7 @@ section.latest_projects ul.project_img{
     margin: 40px 0;
     justify-content: center;
     align-items: center;
-}
-section.latest_projects ul.project_img>* {
-    flex: 1 1 30%;
-    width: 370px; height: 340px;
+    height: 700px;
 }
 
 section.latest_projects ul.project_img li .img1 {background-image: url(../images/project_01.jpg);}
@@ -216,19 +234,18 @@ section.latest_projects ul.project_img .img_text{
     padding: 30px 30px 0;
     background-color: rgb(251,250,248);
 }
-
 section.latest_projects ul.project_img p.prj_main_tt {
     font-size: 17px;
     font-weight: 500;
     color: #c7b299;
     line-height: 24px;
 }
-
+/*VIDEO SECTION*/
 section.video {
     height: 700px; width: 100%;
     background-image: url(../images/video_bg.jpg);
 }
-
+/*COUNTERS*/
 section.counters {
     background: linear-gradient(to right, black, #4e3427);
     height: 300px;
@@ -240,4 +257,114 @@ section.counters .container {
     justify-content: space-around;
     flex-wrap: wrap;
     color: white;
+}
+/*PARTNERS*/
+section.partners {
+    background-image: url(../images/partners_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 490px; width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section.partners .partner_list {
+    display: flex;
+    justify-content: space-around;
+}
+section.partners .partner_list>*{
+    height: 250px; width: 250px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section.partners .partner_list .partners1 {background-image: url(../images/partners_barbers.png);}
+section.partners .partner_list .partners2 {background-image: url(../images/partners_delicious.png);}
+section.partners .partner_list .partners3 {background-image: url(../images/partners_desingers.png);}
+section.partners .partner_list .partners4 {background-image: url(../images/partners_royal.png);}
+
+footer .footer_top {
+    height: 500px; width: 100%;
+    background-color: #191919;
+    padding: 70px 0;
+}
+footer .footer_top div.container {
+    display: grid; /*Grid is better to have a same width for each box*/
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 360px;
+    gap: 1em;
+}
+footer .footer_top h3.main_tt {
+    color: #fff;
+}
+footer .footer_top .footer_logo_img {
+    background-image: url(../images/logo-white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 62px; width: 80%;
+}
+footer .footer_top .footer_logo .sub_tt{
+    line-height: 28px;
+    margin: 20px 0;
+}
+footer .footer_top .read_more {
+    font-weight: 600;
+    color: #fff;
+}
+footer .footer_top .posts_date {
+    font-weight: 600;
+    font-size: 14px;
+}
+footer .recent_posts div:hover {
+    color: #fff;
+}
+footer .recent_posts div:after {
+    border: 0px solid #555555;
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 5px auto; /* This will center the border. */
+    width: 100%; /* Change this to whatever width you want. */
+    padding-top: 5px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid #555555; /* This creates the border. Replace black with whatever color you want. */
+    opacity: 50%;
+}
+
+footer .our_twitter div:after {
+    border: 0px solid #555555;
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 5px auto; /* This will center the border. */
+    width: 100%; /* Change this to whatever width you want. */
+    padding-top: 5px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid #555555; /* This creates the border. Replace black with whatever color you want. */
+    opacity: 50%;
+}
+footer .our_twitter .sub_tt a {
+    color: #03a9d6;
+}
+footer .footer_top .dribble_widget div.widget_imgs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    gap: 0.5em;
+}
+footer .footer_top .dribble_widget div.widget_imgs>*{
+    height: 100px; width: 130px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer .footer_top .dribble_widget .widget_img1 {background-image: url(../images/dribble_01.jpg);}
+footer .footer_top .dribble_widget .widget_img2 {background-image: url(../images/dribble_02.jpg);}
+footer .footer_top .dribble_widget .widget_img3 {background-image: url(../images/dribble_03.jpg);}
+footer .footer_top .dribble_widget .widget_img4 {background-image: url(../images/dribble_04.jpg);}
+
+footer .footer_bottom {
+    background-color: #000;
+    height: 110px;
+}
+footer .footer_bottom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
