@@ -97,10 +97,10 @@
 			</li>
 		</ul>
 		<p class="controls">
-			<a href="" class="prev"><i class="fas fa-chevron-left"></i></a>
-			<a href="" class="next"><i class="fas fa-chevron-right"></i></a>
+			<a href="" class="prev"></a>
+			<a href="" class="next"></a>
 		</p>
-		<p class="custom-pager"></p>
+		<p class="custom-pager clearfix"></p>
 	</div>
 	<main class="content">
 		<section class="service container">
@@ -115,7 +115,6 @@
 			<div class="container">
 				<h3 class="main_tt">Waxom is Realization of your ideas.</h3>
 				<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
-				<p class="timeline_video">03:26</p>
 			</div>	
 		<img class="ideas" src="images/ideas.png"/>
 		</section>
@@ -133,55 +132,109 @@
 		<section class="latest_projects container">
 			<h3 class="main_tt">Our Latest Projects</h3>
 			<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
-			<ul class="project_category">
-				<li> All </li>
-				<li>Web Design</li>
-				<li>Mobile Web</li>
-				<li>Ilustration</li>
-				<li>Photography</li>
-			</ul>
-			<ul class="project_img">
-				<li>
-					<div class="img1"></div>
-					<div class="img_text">
-						<p class="prj_main_tt">Claritas Etiam Processus</p>
+			<div class="project_wrap">
+				<input type="radio" value="all" id="filter-all" name="filter" checked />
+				<label for="filter-all">All</label>
+				
+				<input type="radio" value="Web Design" id="filter-web" name="filter"/>
+				<label for="filter-web">Web Design</label>
+
+				<input type="radio" value="Mobile Web" id="filter-mobile" name="filter"/>
+				<label for="filter-mobile">Mobile</label>
+
+				<input type="radio" value="Ilustration" id="filter-illust" name="filter"/>
+				<label for="filter-illust">Ilustration</label>
+
+				<input type="radio" value="Photography" id="filter-photo" name="filter"/>
+				<label for="filter-photo">Photography</label>
+				<ul class="project_img clearfix">
+					<li class="web">
+						<div class="web  imgWrap">
+							<img src="images/project_01.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>
+						<div class="img_text">
+							<p class="prj_main_tt">Claritas Etiam Processus</p>
+							<p class="sub_tt">Photography, Nature</p>
+						</div>
+					</li>
+					<li class="web">
+						<div class="mobile imgWrap">
+							<img src="images/project_02.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>
+						<div class="img_text">
+							<p class="img_tt prj_main_tt">Quam Nutamus Farum</p>
+							<p class="sub_tt">Graphic Design, Make-Up</p>
+						</div>
+					</li>
+					<li class="mobile">
+						<div class="illust imgWrap">
+						<img src="images/project_03.jpg" alt=""/>
+						<div class="hover_contents">
+							<a href=""><i class="fas fa-link"></i></a>
+							<a href=""><i class="fas fa-search"></i></a>
+						</div>
+					</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Tree Holiday</p>
+						<p class="sub_tt">Photography, Holiday</p>
+					</div>
+					</li>
+					<li class="illust">
+						<div class="photo imgWrap">
+						<img src="images/project_04.jpg" alt=""/>
+						<div class="hover_contents">
+							<a href=""><i class="fas fa-link"></i></a>
+							<a href=""><i class="fas fa-search"></i></a>
+						</div>
+						</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Ach du</p>
 						<p class="sub_tt">Photography, Nature</p>
 					</div>
-				</li>
-				<li>
-					<div class="img2"></div>
-					<div class="img_text">
-						<p class="img_tt prj_main_tt">Quam Nutamus Farum</p>
+					</li>
+					<li class="photo">
+						<div class="illust imgWrap">						
+							<img src="images/project_05.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Du bist wunderbar</p>
 						<p class="sub_tt">Graphic Design, Make-Up</p>
 					</div>
-				</li>
-				<li><div class="img3"></div>					
-					<div class="img_text">
-					<p class="img_tt prj_main_tt">Tree Holiday</p>
-					<p class="sub_tt">Photography, Holiday</p>
-				</div></li>
-				<li><div class="img4"></div>					
-					<div class="img_text">
-					<p class="img_tt prj_main_tt">Ach du</p>
-					<p class="sub_tt">Photography, Nature</p>
-				</div></li>
-				<li><div class="img5"></div>					
-					<div class="img_text">
-					<p class="img_tt prj_main_tt">Du bist wunderbar</p>
-					<p class="sub_tt">Graphic Design, Make-Up</p>
-				</div></li>
-				<li><div class="img6"></div>					
-					<div class="img_text">
-					<p class="img_tt prj_main_tt">Usus Legentis Vicdentur</p>
-					<p class="sub_tt">Photography, Holiday</p>
-				</div></li>
-			</ul>
+					</li>
+					<li class="web">
+						<div class="photo imgWrap">							
+							<img src="images/project_06.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div></div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Usus Legentis Vicdentur</p>
+						<p class="sub_tt">Photography, Holiday</p>
+					</div>
+					</li>
+				</ul>
+			</div>
+
 			<btn class="btn load"><a href="#">Load More</a></btn>
 		</section>
 		<section class="video">
 			<a href="" class=""><i class="fas fa-play-circle"></i></a>
 			<h3 class="main_tt">Waxom Video Presentation</h3>
 			<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
+			<span class="timeline_video">03:26</span>
 		</section>
 		<section class="mobile container">
 			<div class="mobile_img"></div>
@@ -310,7 +363,7 @@
 			</div>
 		</div>
 		<div class="footer_bottom">
-			<div class="container">
+			<div class="container sub_tt">
 				<ul class="bottom_left">
 					<li>Copyright &copy; 2018 <em>Waxom</em></li>
 					<li>Privacy Policy</li>
