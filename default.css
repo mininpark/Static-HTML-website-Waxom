@@ -298,14 +298,27 @@ section.video >* {
     width: 700px;
     padding: 10px 0;
 }
-section.video i {font-size: 5em; width: 100px; height: 100px; 
+section.video .icon {font-size: 4em; width: 100px; height: 100px; 
     background: rgba(0,0,0,0.2); text-align: center; line-height: 100px; 
     border-radius: 50%;
     display:inline-block;
 }
-section.video span {
-    color: #c7b299; font-size; 14px;
+section.video .icon:hover {
+    background-color: #998675; color: white;
 }
+section.video span {
+    color: #c7b299; font-size: 14px;
+}
+#overlay {
+    position: fixed; left: 50%; right:0; top:50%; bottom:0; 
+    background: rgba (0,0,0,0.8); opacity: 0; transition: 0.5s;
+    pointer-events: none;
+}
+#overlay .inner {position:absolute; left: 50; top: 50; transform: translate(-50%, -50%)}
+#overlay .inner .close {position:absolute; width: 2rem; height: 2rem; left: 50; top: 50; transform: translate(-50%, -50%);
+background: #fff; color: #000; font-size: 1rem; border-radius: 50%; top: -1rem; right: -1rem; line-height:2rem;}
+#overlay:target {opacity: 1;  pointer-events: auto;}
+
 /*MOBILE*/
 section.mobile {
     height: 700px;
@@ -331,17 +344,21 @@ section.mobile ul.mobile_text {
     position: absolute;
     left: 570px; top: 420px; right: 0;
 }
-section.mobile ul.mobile_text >* {
-    line-height: 28px;
+
+section.mobile ul.mobile_text span {
+    background: url(../images/sprites.png) no-repeat -402px -89px;
+    height: 21px; width: 21px;
+    display: inline-block;
+    margin-right: 28px;
+    vertical-align: middle;
 }
-section.mobile ul.mobile_text >*::before {
-    background-image: url();
-}
+
 /*COUNTERS*/
 section.counters {
     background: linear-gradient(to right, black, #4e3427);
     height: 300px;
-    padding: 50px 0;
+    padding: 60px 0;
+    text-align: center;
 }
 
 section.counters .container {
@@ -349,6 +366,30 @@ section.counters .container {
     justify-content: space-around;
     flex-wrap: wrap;
     color: white;
+}
+section.counters .container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.counters .count_list :first-child{
+    width: 54px; height: 54px;
+}
+.counters .count_list span.icon_clients {background: url(../images/sprites.png) no-repeat 0px 0px;}
+.counters .count_list span.icon_coffee {background: url(../images/sprites.png) no-repeat -197px 0px;}
+.counters .count_list span.icon_blog {background: url(../images/sprites.png) no-repeat -400px 0px;}
+
+.counters .count_list span.icon_likes {background: url(../images/sprites.png) no-repeat -598px 0px;}
+.counters .count_list span.icon_launched {background: url(../images/sprites.png) no-repeat -792px 0px; width: 54px;
+}
+
+.counters .count_list h3 {
+    font: 48px/68px "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.counters .count_list h4 {
+    font-size: 14px; text-transform: uppercase; color: #c7b299; font-weight: 400;
 }
 /*PARTNERS*/
 section.partners {
@@ -497,7 +538,7 @@ footer .footer_bottom .container em {
 }
 
 /*
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1230px) {
     div>.infoAndUpNext {
         margin: var(--padding) 0;
         flex-direction: row;
