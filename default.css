@@ -240,6 +240,7 @@ main.content .text_purchase .container a {
     background: #fbfaf8; transition: 0.3s;
     position: relative;
 }
+
 /* TRIANGLE OVER TEXT BOX
 .latest_projects .project_wrap .project_img li .img_text::before {
     content: "";
@@ -391,6 +392,55 @@ section.counters .container li {
 .counters .count_list h4 {
     font-size: 14px; text-transform: uppercase; color: #c7b299; font-weight: 400;
 }
+/*RECENT POSTS*/
+.recent_post {
+    text-align: center;
+    padding: 80px 0;
+}
+.recent_post li {width: 370px;}
+.recent_post .post_img {position: relative;}
+.recent_post .post_date {
+    position: absolute; top: 20px; left: 20px; width: 50px; border-radius: 3px; overflow: hidden;
+}
+.recent_post .post_date .date {
+    background: #363636; display: block; line-height: 35px; color: #fff; font-size: 24px; font-weight: 300;
+}
+.recent_post .post_date .month {
+    background: #252525; display: block; line-height: 25px; color: #fff; font-size: 12px; font-weight: 300;
+}
+.recent_post .hover_contents {
+    position: absolute; left:0; right:0; top:0; bottom:0; background: rgba(17,17,17,.7); opacity: 0; transition: 0.3;
+    z-index: 100;}
+.recent_post .hover_contents span{
+    position: absolute; top: 50%; left: 50%; font-size: 48px; transform: translate(-50%,-50%); 
+    opacity: 0; color:#fff; 
+}
+.recent_post li:hover .hover_contents{
+    opacity: 1; 
+}
+.recent_post li:hover .hover_contents span{
+    opacity: 1; 
+}
+.recent_post .post_detail {
+    border-width: 0 1px 1px 1px; border-style: solid; border-color: #f8f8f8;
+    padding: 25px 30px;
+}
+.recent_post .post_detail a {
+    color: #c7b299; font-size: 14px;
+}
+.recent_post li:hover .post_date .date {background: #c7b299; z-index: 102;}
+.recent_post li:hover .post_date .month {background: #a48d72; z-index: 102;}
+.recent_post li:hover .post_detail {background: #362f2d; color: #fff; border-color: #362f2d;}
+
+.recent_post p.post_control {text-align: center;}
+.recent_post p.post_control a {background: url(../images/sprites.png) no-repeat;
+    width: 22px; height: 22px; display: inline-block; text-indent: -9999em;}
+.recent_post p.post_control a.prev {background-position: -194px -89px;}
+.recent_post p.post_control a.next {background-position: -224px -89px;}
+.recent_post p.post_control a.prev:hover {background-position: -194px -111px;}
+.recent_post p.post_control a.next:hover{background-position: -224px -111px;}
+/*Bxslider*/
+
 /*PARTNERS*/
 section.partners {
     background-image: url(../images/partners_bg.jpg);
