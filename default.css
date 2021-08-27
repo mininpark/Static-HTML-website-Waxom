@@ -28,6 +28,9 @@ header h1 a {
 header nav .navbar_main {
     margin-right: 30px;
 }
+.toggle {display:none; width: 50px; height: 50px; font-size: 30px; color: #8c8c8c;
+   }
+
 /*SLIDER*/
 .slider_list li{
     background-repeat: no-repeat;
@@ -167,6 +170,10 @@ main.content .idea_slide .container {
 main.content .idea_slide .container p {
     margin-bottom: 32px;
 }
+.content .idea_slide img {
+    width: 100%;
+}
+/*TEXT PURCHASE*/
 
 main.content .text_purchase {
     background: linear-gradient(to right, black, #4e3427);
@@ -397,6 +404,9 @@ section.counters .container li {
     text-align: center;
     padding: 80px 0;
 }
+.recent_post .sub_tt {
+    padding-bottom: 25px; width: 50%; margin: auto;
+}
 .recent_post li {width: 370px;}
 .recent_post .post_img {position: relative;}
 .recent_post .post_date {
@@ -425,7 +435,7 @@ section.counters .container li {
     border-width: 0 1px 1px 1px; border-style: solid; border-color: #f8f8f8;
     padding: 25px 30px;
 }
-.recent_post .post_detail a {
+.recent_post a {
     color: #c7b299; font-size: 14px;
 }
 .recent_post li:hover .post_date .date {background: #c7b299; z-index: 102;}
@@ -433,12 +443,12 @@ section.counters .container li {
 .recent_post li:hover .post_detail {background: #362f2d; color: #fff; border-color: #362f2d;}
 
 .recent_post p.post_control {text-align: center;}
-.recent_post p.post_control a {background: url(../images/sprites.png) no-repeat;
-    width: 22px; height: 22px; display: inline-block; text-indent: -9999em;}
-.recent_post p.post_control a.prev {background-position: -194px -89px;}
-.recent_post p.post_control a.next {background-position: -224px -89px;}
-.recent_post p.post_control a.prev:hover {background-position: -194px -111px;}
-.recent_post p.post_control a.next:hover{background-position: -224px -111px;}
+.recent_post .bx-controls a {background: url(../images/sprites.png) no-repeat;
+    width: 22px; height: 22px; display: inline-block; text-indent: -9999em; margin: 40px 5px 0px 5px;}
+.recent_post .bx-controls a.bx-prev {background-position: -194px -89px;}
+.recent_post .bx-controls a.bx-next {background-position: -224px -89px;}
+.recent_post .bx-controls a.bx-prev:hover {background-position: -194px -111px;}
+.recent_post .bx-controls a.bx-next:hover{background-position: -224px -111px;}
 /*Bxslider*/
 
 /*PARTNERS*/
@@ -501,8 +511,11 @@ footer .footer_top .posts_date {
     font-weight: 600;
     font-size: 14px;
 }
-footer .recent_posts div:hover {
+footer .recent_posts div:hover .posts_date{
     color: #fff;
+}
+footer .recent_posts div:hover .sub_tt{
+    color: #c7b299;
 }
 footer .recent_posts div:after {
     border: 0px solid #555555;
@@ -514,7 +527,6 @@ footer .recent_posts div:after {
     border-bottom: 1px solid #555555; /* This creates the border. Replace black with whatever color you want. */
     opacity: 50%;
 }
-
 footer .our_twitter div:after {
     border: 0px solid #555555;
     content: ""; /* This is necessary for the pseudo element to work. */ 
@@ -527,6 +539,12 @@ footer .our_twitter div:after {
 }
 footer .our_twitter .sub_tt a {
     color: #03a9d6;
+}
+footer .our_twitter div:hover .posts_date{
+    color: #fff;
+}
+footer .our_twitter div:hover .sub_tt{
+    color: #c7b299;
 }
 footer .footer_top .dribble_widget div.widget_imgs{
     display: grid;
@@ -586,12 +604,21 @@ footer .footer_bottom .container .bottom_right :last-child { border-width: 0px 0
 footer .footer_bottom .container em {
     color:#fff;
 }
+/*MEDIA QUERY*/
 
-/*
-@media screen and (min-width: 1230px) {
-    div>.infoAndUpNext {
-        margin: var(--padding) 0;
-        flex-direction: row;
+@media screen and (max-width: 768px) {
+    .container {width: 100%; padding: 0 15px; box-sizing: border-box; margin: 0 10px;}
+    .container, .container-sm { max-width: none;}
+    header {position: fixed; top:0; background: #fff; margin: 0 ; padding: 10px;}
+    header .toggle {display:block; float: right; line-height: 56px;}
+    header .navbar_main {display: none;}
+    header .logo a {background-image: url(../images/logo_dark.png);}
+    header .navbar_icon li:last-child {display: none;}
+    header .navbar_icon a {color: #8c8c8c; font-size: 20px;}
+    .main_slider {width: 100%; height: auto;} 
+
+    .slide_text {width: 40vh; height: 30vh;}
+    
+@media screen and (max-width: 480px) {
+
     }
-}
-*/
