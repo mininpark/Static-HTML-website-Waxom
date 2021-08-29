@@ -163,7 +163,6 @@ main.content .idea_slide {
 }
 
 main.content .idea_slide .container {
-    width: 50%;
     padding: 70px 0 0;
 }
 
@@ -212,7 +211,7 @@ main.content .text_purchase .container a {
     font-size: 14px; color: #8c8c8c; transition: 0.3s;
 }
 .latest_projects p.sub_tt {
-    padding: 0px 250px 25px 250px;
+    padding: 25px 0;
 }
 /*if input checked, the label color change*/
 .latest_projects .project_wrap input:checked + label {
@@ -609,16 +608,32 @@ footer .footer_bottom .container em {
 @media screen and (max-width: 768px) {
     .container {width: 100%; padding: 0 15px; box-sizing: border-box; margin: 0 10px;}
     .container, .container-sm { max-width: none;}
-    header {position: fixed; top:0; background: #fff; margin: 0 ; padding: 10px;}
-    header .toggle {display:block; float: right; line-height: 56px;}
-    header .navbar_main {display: none;}
+    header {position: static; top:0; background: #fff; margin: 0 ; padding: 20px 0;}
+    header nav {float: none; background: #111; position: absolute; top: 90px; right: 0px; left: 0px;
+    padding: 0 45%; text-align: center; z-index: 104; padding: 0 40px;}
+    header nav ul {float:none;}
+    header .toggle {display:block; position:absolute; right:15px; line-height: 56px;}
     header .logo a {background-image: url(../images/logo_dark.png);}
+    header .navbar_icon li {position: absolute; top: -72px; right: 80px;}
     header .navbar_icon li:last-child {display: none;}
     header .navbar_icon a {color: #8c8c8c; font-size: 20px;}
+    header .navbar_main {display: none;}
+    header .navbar_main li{float:none; border-bottom: 1px solid #252525;}
+    header .navbar_main a:hover {color: #c7b299; font-weight: 600;}
+    .main_slider p.controls .prev {
+        margin-left: 20px;
+    }
+    .main_slider p.controls .next {
+        margin-right: 20px;
+    }
     .main_slider {width: 100%; height: auto;} 
-
+    .service li{width: 22%; margin-right: 4%}
     .slide_text {width: 40vh; height: 30vh;}
-    
+}
 @media screen and (max-width: 480px) {
-
+    .service ul {flex-direction: column; margin: 20px}
+    .service li{width: 100%; margin-right: 0;}
+    .main_slider li .slide_text h3{font-size: 6vw;}
+    .main_slider li .slide_text h2{font-size: 8vw;}
+    .main_slider li .slide_text p{font-size: 3vw; width: 80%; margin: 0 auto 49px;}
     }
