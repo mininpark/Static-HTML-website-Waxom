@@ -120,14 +120,14 @@ header nav .navbar_main {
 }
 /*CONTENT*/
 main.content .service ul {
-    display: flex;
+    display: inline-flex;
+    gap: 10px;
     flex-wrap: nowrap;
     justify-content: space-around;
     text-align: center;
     margin: 90px 0;
 }
 main.content .service ul li {
-    margin: 0px 10px;
     font-size: 20px;
     line-height: 50px;
     font-weight: 600;
@@ -177,13 +177,13 @@ main.content .idea_slide .container p {
 main.content .text_purchase {
     background: linear-gradient(to right, black, #4e3427);
     height: 150px;
-    padding: 50px 0;
+    display: flex;
+    align-items: center;
 }
 main.content .text_purchase ul{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 main.content .text_purchase ul li p{
     font-size: 24px;
@@ -218,14 +218,11 @@ main.content .text_purchase .container a {
     color: #fff; background: #998675;
     border: none;
 }
-.latest_projects .project_wrap .project_img {margin: 40px 0;}
-
+.latest_projects .project_wrap .project_img {margin: 40px 0; display: flex;
+    flex-wrap: wrap; justify-content:center;}
+    .latest_projects .project_wrap .project_img li {margin: 10px;}
 /*USING FLOAT WITH MARGIN and CLEARFIX*/
-.latest_projects .project_wrap .project_img li {width: 370px; margin: 0 30px 30px 0; float: left;}
-.latest_projects .project_wrap .project_img li:nth-child(3n) { margin: 0 0 30px 0; }
 .latest_projects .project_wrap .project_img li img {width: 100%;}
-
-.latest_projects .project_wrap .project_img li .imgWrap {position: relative;}
 .latest_projects .project_wrap .project_img li .hover_contents {
     position: absolute; top: 0; bottom: 0; left: 0; right: 0; padding-top: 107px; z-index: 102;
     color: #000; background: rgba(0,0,0,0.7); opacity: 0; transition: 0.3s;
@@ -305,6 +302,7 @@ section.video >* {
     width: 700px;
     padding: 10px 0;
 }
+section.video .contents {width: 70vw;}
 section.video .icon {font-size: 4em; width: 100px; height: 100px; 
     background: rgba(0,0,0,0.2); text-align: center; line-height: 100px; 
     border-radius: 50%;
@@ -328,29 +326,25 @@ background: #fff; color: #000; font-size: 1rem; border-radius: 50%; top: -1rem; 
 
 /*MOBILE*/
 section.mobile {
-    height: 700px;
-    position: relative;
+    height: 700px; display: flex; align-items: center;
 }
+
 section.mobile div.mobile_img {
     background-image: url(../images/excellent_mobile.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 600px; width: 500px;
-    position: absolute; left: 100px; right:0; top: 100px;
+    background-repeat: no-repeat; background-size: contain;
+    height: 80%;
+    width: 65%;
+    margin-left: 50px;
+    align-self: flex-end;
 }
-section.mobile h3.main_tt {
-    position: absolute;
-    left: 500px; top: 200px; right: 0;
+section.mobile .mobile_contents {width: 800px; height: 400px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-section.mobile p.sub_tt {
-    position: absolute;
-    left: 500px; top: 280px; right: 0;
-    line-height: 28px;
-}
-section.mobile ul.mobile_text {
-    position: absolute;
-    left: 570px; top: 420px; right: 0;
-}
+section.mobile p.sub_tt {line-height: 28px;}
+section.mobile ul.mobile_text {padding: 28px 0 0 28px; flex-wrap: nowrap;}
+section.mobile ul li {font-size: 12px;}
 
 section.mobile ul.mobile_text span {
     background: url(../images/sprites.png) no-repeat -402px -89px;
@@ -363,22 +357,21 @@ section.mobile ul.mobile_text span {
 /*COUNTERS*/
 section.counters {
     background: linear-gradient(to right, black, #4e3427);
-    height: 300px;
-    padding: 60px 0;
     text-align: center;
 }
 
 section.counters .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     color: white;
+    padding: 75px 0;
 }
 section.counters .container li {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    width: 19%;
 }
 .counters .count_list :first-child{
     width: 54px; height: 54px;
@@ -606,12 +599,17 @@ footer .footer_bottom .container em {
 /*MEDIA QUERY*/
 
 @media screen and (max-width: 768px) {
-    .container {width: 100%; padding: 0 15px; box-sizing: border-box; margin: 0 10px;}
+    .container {width: 100%; padding: 0 15px; box-sizing: border-box; }
     .container, .container-sm { max-width: none;}
     header {position: static; top:0; background: #fff; margin: 0 ; padding: 20px 0;}
     header nav {float: none; background: #111; position: absolute; top: 90px; right: 0px; left: 0px;
     padding: 0 45%; text-align: center; z-index: 104; padding: 0 40px;}
     header nav ul {float:none;}
+    .main_slider .slide_text {max-width: 80%;}
+    .main_slider .slide_text h3 {font-size: 4vw;}
+    .main_slider .slide_text h2 {font-size: 6vw;}
+    .main_slider .slide_text p {display:8vw;}
+    .main_slider .slide_text a { margin-top: 1vw;}
     header .toggle {display:block; position:absolute; right:15px; line-height: 56px;}
     header .logo a {background-image: url(../images/logo_dark.png);}
     header .navbar_icon li {position: absolute; top: -72px; right: 80px;}
@@ -620,20 +618,75 @@ footer .footer_bottom .container em {
     header .navbar_main {display: none;}
     header .navbar_main li{float:none; border-bottom: 1px solid #252525;}
     header .navbar_main a:hover {color: #c7b299; font-weight: 600;}
-    .main_slider p.controls .prev {
-        margin-left: 20px;
-    }
-    .main_slider p.controls .next {
-        margin-right: 20px;
-    }
+
+    .main_slider p.controls .prev {margin-left: 20px;}
+    .main_slider p.controls .next {margin-right: 20px;}
     .main_slider {width: 100%; height: auto;} 
-    .service li{width: 22%; margin-right: 4%}
+
     .slide_text {width: 40vh; height: 30vh;}
-}
-@media screen and (max-width: 480px) {
     .service ul {flex-direction: column; margin: 20px}
     .service li{width: 100%; margin-right: 0;}
+    .text_purchase {padding: none;}
+    .text_purchase ul {flex-direction: column; align-items: center;}
+    .text_purchase ul li p {font-size: 2vw;}
+    .latest_projects {padding: 0 0 40px 0;}
+
+    .mobile {flex-direction: column-reverse;}
+    .mobile .mobile_contents {max-width: 100%; align-items: center;}
+    .mobile .mobile_contents p {text-align: center;}
+    .mobile div.mobile_img {max-height: 300px;}
+
+    .counters ul {max-width: 95%;}
+    .counters .count_list h3 {font-size: 6vw; line-height: 6vw;}
+    .counters .count_list h4 {font-size: 2vw; line-height: 2vw;}
+
+    .recent_post .bx-controls-direction {margin-bottom: 50px;}
+    
+    .partners {max-height: 280px;}
+
+    footer .footer_top {text-align: center; max-height: 250px; padding: 30px 0 0 0;}
+ 
+    footer .footer_top div.container {grid-auto-flow: row;}
+    footer .footer_top .recent_posts {display: none;}
+    footer .footer_top .our_twitter {display: none;}
+    footer .footer_top .dribble_widget {display: none;}
+    footer .footer_bottom .container {flex-direction: column; gap: 30px; padding: 0; align-items: center;}
+}
+
+@media screen and (max-width: 480px) {
+    .container {width: 100%;}
+
+    .main_slider .slide_text {max-width: 60%;}
+    .main_slider .slide_text h3 {font-size: 6vw;}
+    .main_slider .slide_text h2 {font-size: 7vw;}
+    .main_slider .slide_text p {display:none;}
+    .main_slider .slide_text a { margin-top: 20vw;}
+
+    .service ul {flex-direction: column; margin: 0px}
+    .service li{ align-items: center;}
     .main_slider li .slide_text h3{font-size: 6vw;}
     .main_slider li .slide_text h2{font-size: 8vw;}
     .main_slider li .slide_text p{font-size: 3vw; width: 80%; margin: 0 auto 49px;}
-    }
+    .latest_projects .project_wrap ul {margin-left: 5vw;}
+    .latest_projects .project_wrap .project_img {margin-left: 5vw;}
+
+
+    main.content .text_purchase ul li p.text_p_sub{font-size: 3vw}
+
+    .video .contents h3 {font-size: 5vw;}
+    .video .contents p {font-size: 3vw;}
+    .project_wrap ul {width: 90vw}
+
+    .mobile .mobile_contents h3 {font-size: 5vw;}
+    .mobile .mobile_contents p {font-size: 3vw;}
+    section.mobile ul.mobile_text {padding: 10px 0; }
+    section.mobile ul.mobile_text li {font-size: 2.8vw;}
+    section.mobile ul.mobile_text span {margin-right: 5px;}
+
+    .recent_post p.sub_tt {font-size: 3vw; }
+    footer .footer_top {padding: 2vw; max-height: 200px;}
+    footer .footer_top .footer_logo .sub_tt {font-size: 3vw; line-height: 6vw; margin-right: 5%;}
+    footer .footer_top .footer_logo_img {height: 42px;}
+    footer .footer_bottom .container {font-size: 3vw; line-height: 4vw; margin: 0;}
+
+
