@@ -1,6 +1,6 @@
 # waxom
 
-![plot](src/Waxom Hemepage.jpg)
+![alt tag](https://github.com/mininpark/waxom/src/Waxom Hemepage.jpg)
 
 
 ## 1. HTML STRUCTURE
