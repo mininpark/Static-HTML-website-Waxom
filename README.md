@@ -1,6 +1,7 @@
 # waxom
 
-![plot](./waxom/src/Waxom Homepage.jpg)
+![plot](src/Waxom Hemepage.jpg)
+
 
 ## 1. HTML STRUCTURE
 
