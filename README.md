@@ -1,6 +1,6 @@
 # waxom
 
-![alt tag](https://github.com/mininpark/waxom/src/Waxom_Hemepage.jpg)
+![alt text](https://github.com/[mininpark]/[waxom]/blob/[master]/Waxom_Hemepage.jpg?raw=true)
 
 
 ## 1. HTML STRUCTURE
