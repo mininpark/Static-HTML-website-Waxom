@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Waxom free psd template</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/> 
+	<meta name="description" content="Waxom free psd template"/>
+	<meta name="author" content="Mina"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="keywords" content="waxom, web, app, design, responsive"/> <!--site search keywords in web -->
+	<meta name="viewport" content="width=device-width, inintial-scale=1"/>
+
+	<!-- icons fontawesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+
+	<!--webfont script load is a bit faster: montserrat, raleway-->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+  	WebFont.load({
+    google: {
+      families: ['Montserrat:300,400,700', 'Raleway:300,400,500,700,800']
+    }
+  	});
+	</script>
+	
+	<!-- cycle2 cdn contents delivery network: include jQuery & Cycle2 - Demo - Getting started -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/malsup/cycle2@2.1.6/build/jquery.cycle2.min.js"></script>
+	<!--cycle2: Carousel-->
+	<script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
+	<script>$.fn.cycle.defaults.autoSelector = '.cycle-slideshow';</script>
+
+	<!--bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!--Bxslider & SLIDE DOWN QUERY-->
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $('.post_list').bxSlider({
+			minSlides : 1, maxSlides:3, moveSlides: 1, slideWidth: 370, slideMargin: 30,
+			pager:false,
+			controls: true,
+		  });
+		});
+//slidedown
+		$(document).ready(function(){
+		  $(".toggle").click(function(){
+		$(".navbar_main").slideToggle();
+	  });
+	  //
+	  $(window).resize(function(){
+		  if($(window).width() > 768){
+			  //true to do
+			  $(".navbar_main").show();
+		  }
+		  else {
+			  //false to do
+			  $(".navbar_main").hide();
+		  }
+	  });
+	  
+	});
+	</script>
+	<!--higher priority, if the stylesheets come at last-->
+	<link rel="stylesheet" href="css/default.css"/>
+</head>
+
+<body>
+	<header>
+		<div class="container clearfix">
+			<h1 class="logo">
+				<a href="#">waxom</a>
+			</h1>
+			<span class="toggle"><i class="fa fa-bars hamburger"></i></span>
+			<nav class="clearfix">
+				<ul class="navbar_main"> 
+					<!--ul>li*8>a-->
+					<li><a href="#" class="active">home</a></li>
+					<li><a href="#">about us</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">features</a></li>
+					<li><a href="#">blog</a></li>
+					<li><a href="#">price</a></li>
+					<li><a href="#">shortcodes</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+				<ul class="navbar_icon">
+					<li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+	<div class="main_slider">
+		<ul class="slider_list cycle-slideshow"
+		data-cycle-fx="scrollHorz"
+		data-cycle-timeout="0"
+		data-cycle-slides="> li"
+		data-cycle-prev=".main_slider .prev"
+		data-cycle-next=".main_slider .next"
+		data-cycle-pager=".custom-pager"
+		>
+			<li class="slide1">
+				<div class="slide_text">
+					<h3>Unique and Modern Design</h3>
+					<h2>Portfolio PSD Template</h2>
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+					<a href="#" class="btn">get started</a>
+				</div>
+			</li>
+			<li class="slide2">
+				<div class="slide_text">
+				<h3>Unique and Modern Design</h3>
+				<h2>Portfolio PSD Template</h2>
+				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<a href="#" class="btn">get started</a>
+			</div>
+			</li>
+			<li class="slide3">
+				<div class="slide_text">
+				<h3>Unique and Modern Design</h3>
+				<h2>Portfolio PSD Template</h2>
+				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				<a href="#" class="btn">get started</a>
+			</div>
+			</li>
+		</ul>
+		<p class="controls">
+			<a href="" class="prev"></a>
+			<a href="" class="next"></a>
+		</p>
+		<p class="custom-pager clearfix"></p>
+	</div>
+	<main class="content">
+		<section class="service container">
+			<ul>
+				<li><i class="fas fa-pencil-alt"></i>Web & App Design<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p></li>
+				<li><i class="fas fa-leaf"></i>Development<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p></li>
+				<li><i class="fas fa-cog"></i>Customization<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p></li>
+				<li><i class="fas fa-bullhorn"></i>Marketing<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p></li>
+			</ul>
+		</section>
+		<section class="idea_slide">
+			<div class="container">
+				<h3 class="main_tt">Waxom is Realization of your ideas.</h3>
+				<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
+			</div>	
+		<img class="ideas" src="images/ideas.png"/>
+		</section>
+		<section class="text_purchase">
+			<ul class="container">
+			<li>
+				<p><em>Waxom </em>Multipurpose WordPress Theme</p>
+				<p class="text_p_sub">Don't Forget to Rate the Template. Thank you so much!</p>
+			</li>
+			<li>
+				<btn class=btn><a href="#">Purchase now</a></btn>
+			</li>
+			</ul>
+		</section>
+		<section class="latest_projects container">
+			<h3 class="main_tt">Our Latest Projects</h3>
+			<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
+			<div class="project_wrap">
+				<input type="radio" value="all" id="filter-all" name="filter" checked />
+				<label for="filter-all">All</label>
+				
+				<input type="radio" value="Web Design" id="filter-web" name="filter"/>
+				<label for="filter-web">Web Design</label>
+
+				<input type="radio" value="Mobile Web" id="filter-mobile" name="filter"/>
+				<label for="filter-mobile">Mobile</label>
+
+				<input type="radio" value="Ilustration" id="filter-illust" name="filter"/>
+				<label for="filter-illust">Ilustration</label>
+
+				<input type="radio" value="Photography" id="filter-photo" name="filter"/>
+				<label for="filter-photo">Photography</label>
+				<ul class="project_img clearfix">
+					<li class="web">
+						<div class="web  imgWrap">
+							<img src="images/project_01.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>
+						<div class="img_text">
+							<p class="prj_main_tt">Claritas Etiam Processus</p>
+							<p class="sub_tt">Photography, Nature</p>
+						</div>
+					</li>
+					<li class="web">
+						<div class="mobile imgWrap">
+							<img src="images/project_02.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>
+						<div class="img_text">
+							<p class="img_tt prj_main_tt">Quam Nutamus Farum</p>
+							<p class="sub_tt">Graphic Design, Make-Up</p>
+						</div>
+					</li>
+					<li class="mobile">
+						<div class="illust imgWrap">
+						<img src="images/project_03.jpg" alt=""/>
+						<div class="hover_contents">
+							<a href=""><i class="fas fa-link"></i></a>
+							<a href=""><i class="fas fa-search"></i></a>
+						</div>
+					</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Tree Holiday</p>
+						<p class="sub_tt">Photography, Holiday</p>
+					</div>
+					</li>
+					<li class="illust">
+						<div class="photo imgWrap">
+						<img src="images/project_04.jpg" alt=""/>
+						<div class="hover_contents">
+							<a href=""><i class="fas fa-link"></i></a>
+							<a href=""><i class="fas fa-search"></i></a>
+						</div>
+						</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Ach du</p>
+						<p class="sub_tt">Photography, Nature</p>
+					</div>
+					</li>
+					<li class="photo">
+						<div class="illust imgWrap">						
+							<img src="images/project_05.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div>
+						</div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Du bist wunderbar</p>
+						<p class="sub_tt">Graphic Design, Make-Up</p>
+					</div>
+					</li>
+					<li class="web">
+						<div class="photo imgWrap">							
+							<img src="images/project_06.jpg" alt=""/>
+							<div class="hover_contents">
+								<a href=""><i class="fas fa-link"></i></a>
+								<a href=""><i class="fas fa-search"></i></a>
+							</div></div>					
+						<div class="img_text">
+						<p class="img_tt prj_main_tt">Usus Legentis Vicdentur</p>
+						<p class="sub_tt">Photography, Holiday</p>
+					</div>
+					</li>
+				</ul>
+			</div>
+
+			<btn class="btn load"><a href="#">Load More</a></btn>
+		</section>
+		<section class="video">
+			<div class="contents">
+				<!--ID: overlay-->
+				<a href="#overlay" class="icon"><i class="fas fa-play-circle"></i></a>
+				<h3 class="main_tt">Waxom Video Presentation</h3>
+				<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
+				<span class="timeline_video">03:26</span>
+			</div>
+			<div id="overlay">
+				<div class="inner">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/NXD-WJYtkyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+					<a href="" class="close">X</a>
+				</div>
+			</div>
+		</section>
+		<section class="mobile container">
+			<div class="mobile_img"></div>
+			<div class="mobile_contents">
+				<h3 class="main_tt">Excellent for Mobile Devices</h3>
+				<p class="sub_tt">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+				<ul class="mobile_text">
+					<li class="sub_tt"><span class="list_symbol"></span>Nam liber tempor cum soluta nobis eleifend option</li>
+					<li class="sub_tt"><span class="list_symbol"></span>Option congue nihil imperdiet doming id quod mazim placerat facer</li>
+					<li class="sub_tt"><span class="list_symbol"></span>Eodem modo typi, qui nunc nobis videntur parum futurum</li>
+					<li class="sub_tt"><span class="list_symbol"></span>Investigationes demonstraverunt lectores</li>
+				</ul>
+			</div>
+
+		</section>
+		<section class="counters">
+			<ul class="container">
+				<li class="count_list">
+					<span class="icon_clients"></span>
+					<h3 class="count_num">3587</h3>
+					<h4 class="count_title">satisfied clients</h4>
+					<span class="bar"></span>
+				</li>
+				<li class="count_list">		
+					<span class="icon_coffee"></span>							
+					<h3 class="count_num">207</h3>
+					<h4 class="count_title">cups of coffee</h4>
+					<span class="bar"></span>
+
+				</li>
+				<li class="count_list">
+					<span class="icon_blog"></span>
+					<h3 class="count_num">2500</h3>
+					<h4 class="count_title">blog posts</h4>
+					<span class="bar"></span>
+
+				</li>
+				<li class="count_list">	
+					<span class="icon_likes"></span>	
+					<h3 class="count_num">873</h3>
+					<h4 class="count_title">likes</h4>
+					<span class="bar"></span>
+				</li>
+				<li class="count_list">
+					<span class="icon_launched"></span>
+					<h3 class="count_num">900</h3>
+					<h4 class="count_title">we launched</h4>
+					<span class="bar"></span>
+
+				</li>
+			</ul>
+		</section>
+		<section class="recent_post container">
+			<h3 class="main_tt">Recent Posts</h3>
+			<p class="sub_tt">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			<ul class="post_list">
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_01.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_02.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_03.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_01.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_03.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+				<li>
+					<div class="post_img">
+						<img src="images/recent_post_02.jpg" alt=""/>
+						<div class="post_date">
+							<span class="date">12</span>
+							<span class="month">Dec.</span>
+						</div>
+						<div class="hover_contents">
+							<span>
+								<i class= "fas fa-search-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="post_detail">
+						<h4 class="prj_main_tt">Claritas Etiam Processus</p>
+						<p class="sub_tt">Photography, Nature</p>
+						<a class="read_more">Read More &#8227;</a>
+					</div>
+				</li>
+			</ul>
+
+		</section>
+		<section class="partners">
+			<ul class="partner_list container">
+				<li class="partners1"></li>
+				<li class="partners2"></li>
+				<li class="partners3"></li>
+				<li class="partners4"></li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer_top">
+			<div class="container">
+				<div class="footer_logo">
+					<div class="footer_logo_img"></div>
+					<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li legunt seaplus. Claritas est eiam processus dynamicus. Qui sequiur mutationem consuetudium.</p>
+					<p class="read_more">Read More &#8227;</p>
+				</div>
+				<div class="recent_posts">
+					<h3 class="main_tt">Recent Posts</h3>
+					<div class="recent_posts_list">
+						<p class="posts_date">September 08. 2015</p>
+						<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li </p>
+					</div>
+					<div class="recent_posts_list">
+						<p class="posts_date">September 08. 2015</p>
+						<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li </p>
+					</div>
+					<div class="recent_posts_list">
+						<p class="posts_date">September 08. 2015</p>
+						<p class="sub_tt">Investigationes demonstraverunt lectores legre me lius quad li </p>
+					</div>
+				</div>
+				<div class="our_twitter">
+					<h3 class="main_tt">Our Twitter</h3>
+					<div class="twitter_list">
+						<p class="sub_tt"><a href="" class="twitter_a">@waxom</a> Cum soluta nobis eleifend option congue nihil imperdiet doming</p>
+						<p class="posts_date">3 mins ago</p>
+					</div>
+					<div class="twitter_list">
+						<p class="sub_tt">Mirum est <a href="" class="twitter_a">#envato</a> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+						</p>
+						<p class="posts_date">5 mins ago</p>
+					</div>
+					<div class="twitter_list">
+						<p class="sub_tt">Soluta nobis option bit.ly/1Hniso7</p>
+						<p class="posts_date">30 days ago</p>
+					</div>
+				</div>
+				<div class="dribble_widget">
+					<h3 class="main_tt">Dribble Widget</h3>
+					<div class="widget_imgs">
+						<div class="widget_img1"></div>
+						<div class="widget_img2"></div>
+						<div class="widget_img3"></div>
+						<div class="widget_img4"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container sub_tt">
+				<ul class="bottom_left">
+					<li>Copyright &copy; 2018 <em>Waxom</em></li>
+					<li>Privacy Policy</li>
+					<li>FAQ</li>
+					<li>Support</li>
+				</ul>
+				<ul class="bottom_right">
+					<li>Desigend by <em>Theme Mina</em></li>
+					<li>Only on <em>Envato Market</em></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
