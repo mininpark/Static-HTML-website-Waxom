@@ -2,6 +2,7 @@
 
 ![alt text](https://github.com/mininpark/waxom/blob/master/src/Waxom_Hemepage.jpg?raw=true)
 
+Live Server: https://mininpark.github.io/waxom/
 
 ## 1. HTML STRUCTURE
 
